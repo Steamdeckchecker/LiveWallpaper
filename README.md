@@ -23,8 +23,6 @@ Desktop icons, selection boxes, and right-click menus remain usable. Pointer int
 
 To install, fully extract the ZIP, open a terminal in the included folder, and run `bash install.sh` **without sudo**. Then select **“Live Background (KDE)”** in KDE’s wallpaper settings. After updating an existing installation, log out and back in once.
 
-👉 **[GitHub project](https://github.com/Steamdeckchecker/LiveWallpaper)**
-
 The original animations come from [ryth9419-jpg/livewallpaper](https://github.com/ryth9419-jpg/livewallpaper). This KDE adaptation builds on that work with additional settings and interactions.
 
 Feedback, bug reports, and ideas for additional themes are welcome!
