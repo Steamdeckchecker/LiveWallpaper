@@ -38,7 +38,7 @@ try {
                 const id = next--;
                 const due = performance.now() + delay;
                 window.__rotationTimers.set(id, {callback: () => {
-                    offset += Math.max(0, due - performance.now());
+                    offset += Math.max(0, due - performance.now()) + 1;
                     callback(...args);
                 }, delay});
                 return id;
