@@ -1,0 +1,62 @@
+name: Build and check Lively wallpaper
+on:
+  push:
+    branches: [codex/lively-windows]
+    paths:
+      - windows/lively/**
+      - Live_Background_KDE_v0.3.2.zip
+      - .github/workflows/lively-package.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lively-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Stage shared renderer and Lively settings
+        run: python windows/lively/build.py
+      - name: Install browser test runtime
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Run browser and Lively callback checks
+        run: node windows/lively/test.mjs
+      - name: Package verified wallpaper
+        run: python windows/lively/build.py --pack
+      - name: Upload importable wallpaper ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: SDC-Live-Background-Lively-0.3.2
+          path: |
+            Live_Background_Lively_v0.3.2.zip
+            Live_Background_Lively_v0.3.2.zip.sha256
+          if-no-files-found: error
+      - name: Upload validation report and previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lively-browser-validation
+          path: build/qa
+          if-no-files-found: ignore
+      - name: Save tested package on the Windows branch
+        if: github.ref == 'refs/heads/codex/lively-windows'
+        run: |
+          git add -- Live_Background_Lively_v0.3.2.zip Live_Background_Lively_v0.3.2.zip.sha256 windows/lively/thumbnail.jpg
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Build verified Lively 0.3.2 package [skip ci]"
+            git push origin HEAD:codex/lively-windows
+          fi

@@ -1,0 +1,104 @@
+{
+  "Languages": {
+    "de-DE": {
+      "theme": {
+        "text": "Motiv",
+        "items": [
+          "Matrix-Regen",
+          "Code-Stream",
+          "Gewitter",
+          "Sternenfeld",
+          "Glühwürmchen",
+          "Neon-Emblem-SDC",
+          "Neon-Emblem-Bazzite",
+          "Schwebende Blasen SDC",
+          "Schwebende Blasen Bazzite",
+          "Zufällig (automatischer Wechsel)"
+        ]
+      },
+      "randomMinutes": {
+        "text": "Zufallswechsel alle (Minuten)"
+      },
+      "speed": {
+        "text": "Animationsgeschwindigkeit (%)"
+      },
+      "fps": {
+        "text": "Bilder pro Sekunde"
+      },
+      "quality": {
+        "text": "Renderauflösung (%)"
+      },
+      "dim": {
+        "text": "Bild hinter den Blasen abdunkeln (%)"
+      },
+      "paused": {
+        "text": "Animation und Zufallswechsel pausieren"
+      },
+      "logo": {
+        "text": "Neon-Emblem-SDC: Logo"
+      },
+      "bazziteLogo": {
+        "text": "Neon-Emblem-Bazzite: Logo"
+      },
+      "wallpaper": {
+        "text": "Schwebende Blasen SDC: Hintergrund"
+      },
+      "bazziteWallpaper": {
+        "text": "Schwebende Blasen Bazzite: Hintergrund"
+      },
+      "info": {
+        "value": "Automatische Vollbild- und Akkupause unter Lively-Einstellungen > Leistung festlegen. Zum Einstieg 24 FPS und 60 % Renderauflösung verwenden."
+      }
+    },
+    "de": {
+      "theme": {
+        "text": "Motiv",
+        "items": [
+          "Matrix-Regen",
+          "Code-Stream",
+          "Gewitter",
+          "Sternenfeld",
+          "Glühwürmchen",
+          "Neon-Emblem-SDC",
+          "Neon-Emblem-Bazzite",
+          "Schwebende Blasen SDC",
+          "Schwebende Blasen Bazzite",
+          "Zufällig (automatischer Wechsel)"
+        ]
+      },
+      "randomMinutes": {
+        "text": "Zufallswechsel alle (Minuten)"
+      },
+      "speed": {
+        "text": "Animationsgeschwindigkeit (%)"
+      },
+      "fps": {
+        "text": "Bilder pro Sekunde"
+      },
+      "quality": {
+        "text": "Renderauflösung (%)"
+      },
+      "dim": {
+        "text": "Bild hinter den Blasen abdunkeln (%)"
+      },
+      "paused": {
+        "text": "Animation und Zufallswechsel pausieren"
+      },
+      "logo": {
+        "text": "Neon-Emblem-SDC: Logo"
+      },
+      "bazziteLogo": {
+        "text": "Neon-Emblem-Bazzite: Logo"
+      },
+      "wallpaper": {
+        "text": "Schwebende Blasen SDC: Hintergrund"
+      },
+      "bazziteWallpaper": {
+        "text": "Schwebende Blasen Bazzite: Hintergrund"
+      },
+      "info": {
+        "value": "Automatische Vollbild- und Akkupause unter Lively-Einstellungen > Leistung festlegen. Zum Einstieg 24 FPS und 60 % Renderauflösung verwenden."
+      }
+    }
+  }
+}

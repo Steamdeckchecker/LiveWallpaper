@@ -1,0 +1,101 @@
+{
+  "theme": {
+    "type": "dropdown",
+    "value": 5,
+    "text": "Theme",
+    "items": [
+      "Matrix Rain",
+      "Code Stream",
+      "Thunderstorm",
+      "Starfield",
+      "Fireflies",
+      "Neon Emblem SDC",
+      "Neon Emblem Bazzite",
+      "Floating Bubbles SDC",
+      "Floating Bubbles Bazzite",
+      "Random (automatic rotation)"
+    ]
+  },
+  "randomMinutes": {
+    "type": "slider",
+    "value": 5,
+    "min": 1,
+    "max": 30,
+    "step": 1,
+    "tick": 1,
+    "text": "Random change interval (minutes)"
+  },
+  "speed": {
+    "type": "slider",
+    "value": 100,
+    "min": 25,
+    "max": 300,
+    "step": 5,
+    "tick": 25,
+    "text": "Animation speed (%)"
+  },
+  "fps": {
+    "type": "slider",
+    "value": 24,
+    "min": 10,
+    "max": 60,
+    "step": 1,
+    "tick": 10,
+    "text": "Frames per second"
+  },
+  "quality": {
+    "type": "slider",
+    "value": 60,
+    "min": 40,
+    "max": 100,
+    "step": 5,
+    "tick": 10,
+    "text": "Render resolution (%)"
+  },
+  "dim": {
+    "type": "slider",
+    "value": 45,
+    "min": 0,
+    "max": 90,
+    "step": 1,
+    "tick": 10,
+    "text": "Bubble background dimming (%)"
+  },
+  "paused": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Pause animation and random rotation"
+  },
+  "logo": {
+    "type": "folderDropdown",
+    "value": "steam-deck-checker.png",
+    "folder": "assets",
+    "filter": "*.png|*.jpg|*.jpeg|*.webp|*.svg",
+    "text": "Neon Emblem SDC: logo"
+  },
+  "bazziteLogo": {
+    "type": "folderDropdown",
+    "value": "bazzite-logo.svg",
+    "folder": "assets",
+    "filter": "*.png|*.jpg|*.jpeg|*.webp|*.svg",
+    "text": "Neon Emblem Bazzite: logo"
+  },
+  "wallpaper": {
+    "type": "folderDropdown",
+    "value": "steam-deck-checker-games.png",
+    "folder": "assets",
+    "filter": "*.png|*.jpg|*.jpeg|*.webp",
+    "text": "Floating Bubbles SDC: background"
+  },
+  "bazziteWallpaper": {
+    "type": "folderDropdown",
+    "value": "bazzite-wallpaper.png",
+    "folder": "assets",
+    "filter": "*.png|*.jpg|*.jpeg|*.webp",
+    "text": "Floating Bubbles Bazzite: background"
+  },
+  "info": {
+    "type": "label",
+    "value": "For automatic fullscreen or battery pause, use Lively Settings > Performance. Start with 24 FPS and 60% render resolution."
+  }
+}

@@ -35,3 +35,26 @@ Install:
 4. Set the wallpaper type to **Live Background (KDE)**, choose a theme, and click **Apply**.
 
 After updating an existing installation, log out and back in once.
+
+
+## Windows 11 / Lively Wallpaper
+
+A Windows version with all nine themes is available as a Lively web wallpaper.
+
+1. Install [Lively Wallpaper](https://www.rocksdanister.com/lively/), preferably 2.2 or newer.
+2. Download [Live_Background_Lively_v0.3.2.zip](./Live_Background_Lively_v0.3.2.zip).
+3. Drag that ZIP directly into Lively, select the imported wallpaper, then right-click > **Customise**.
+
+The default is Neon Emblem SDC. Theme selection, random rotation, custom SDC/Bazzite
+images, speed, FPS, render resolution and dimming are configurable through Lively.
+Fullscreen and battery pause rules are configured in Lively Settings > Performance.
+
+[Deutsche Anleitung](windows/lively/README_DE.md) · [English instructions](windows/lively/README_EN.md)
+
+The Windows package reuses the renderer and assets from the KDE ZIP. Lively provides
+the native desktop integration. Automated Chromium tests simulate Lively's documented
+settings and pause callbacks; full Windows/Lively desktop and touchscreen checks are
+separate tests.
+
+To rebuild: run python windows/lively/build.py, install Playwright, run
+node windows/lively/test.mjs, then python windows/lively/build.py --pack.

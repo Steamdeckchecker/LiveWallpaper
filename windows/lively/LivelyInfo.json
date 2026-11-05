@@ -1,0 +1,14 @@
+{
+  "AppVersion": "2.2.0.0",
+  "Title": "SDC Live Background 0.3.2",
+  "Thumbnail": "thumbnail.jpg",
+  "Preview": null,
+  "Desc": "Nine interactive themes with SDC and Bazzite variants, configurable random rotation and custom images.",
+  "Author": "Steam Deck Checker; original animations by ryth9419-jpg",
+  "License": "See CREDITS.md",
+  "Contact": "https://github.com/Steamdeckchecker/LiveWallpaper",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--pause-event true",
+  "IsAbsolutePath": false
+}
