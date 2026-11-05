@@ -1,10 +1,10 @@
-# SDC Live Background 0.3.2 for Windows 11 / Lively Wallpaper
+# SDC Live Background 0.3.3 for Windows 11 / Lively Wallpaper
 
 ## Installation
 
 1. Install Lively Wallpaper from https://www.rocksdanister.com/lively/.
    Lively 2.2 or newer with the default WebView2 player is recommended.
-2. **Drag Live_Background_Lively_v0.3.2.zip directly into the Lively window.**
+2. **Drag Live_Background_Lively_v0.3.3.zip directly into the Lively window.**
    Do not extract the ZIP for this import.
 3. Select the imported wallpaper.
 4. Right-click its tile > **Customise** to select a theme and adjust settings.
@@ -13,6 +13,20 @@ The default is **Neon Emblem SDC**. All nine themes are included:
 Matrix Rain, Code Stream, Thunderstorm, Starfield, Fireflies,
 Neon Emblem SDC, Neon Emblem Bazzite, Floating Bubbles SDC and
 Floating Bubbles Bazzite.
+
+## Fixes in 0.3.3
+
+- While connected to Lively, host pause events control rotation. An
+  embedded browser reporting hidden no longer blocks an active wallpaper.
+- Animation frames also check the next deadline in case a long browser
+  timer is delivered late.
+- Replayed unchanged settings retain the deadline; stale timer callbacks
+  cannot cause duplicate changes.
+- The interval label explicitly requires selecting **Random** under Theme.
+
+Import the new ZIP as a new wallpaper, then select **Customise > Theme >
+Random (automatic rotation)** and initially set **1 minute**. Lively keeps
+an imported copy; downloading a new ZIP does not update an existing tile.
 
 ## Features and settings
 

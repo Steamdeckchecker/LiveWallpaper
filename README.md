@@ -42,7 +42,7 @@ After updating an existing installation, log out and back in once.
 A Windows version with all nine themes is available as a Lively web wallpaper.
 
 1. Install [Lively Wallpaper](https://www.rocksdanister.com/lively/), preferably 2.2 or newer.
-2. Download [Live_Background_Lively_v0.3.2.zip](./Live_Background_Lively_v0.3.2.zip).
+2. Download [Live_Background_Lively_v0.3.3.zip](./Live_Background_Lively_v0.3.3.zip).
 3. Drag that ZIP directly into Lively, select the imported wallpaper, then right-click > **Customise**.
 
 The default is Neon Emblem SDC. Theme selection, random rotation, custom SDC/Bazzite

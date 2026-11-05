@@ -17,7 +17,7 @@
         ]
       },
       "randomMinutes": {
-        "text": "Zufallswechsel alle (Minuten)"
+        "text": "Wechselintervall in Minuten (Motiv: Zufällig wählen)"
       },
       "speed": {
         "text": "Animationsgeschwindigkeit (%)"
@@ -67,7 +67,7 @@
         ]
       },
       "randomMinutes": {
-        "text": "Zufallswechsel alle (Minuten)"
+        "text": "Wechselintervall in Minuten (Motiv: Zufällig wählen)"
       },
       "speed": {
         "text": "Animationsgeschwindigkeit (%)"

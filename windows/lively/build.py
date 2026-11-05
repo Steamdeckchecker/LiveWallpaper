@@ -12,7 +12,7 @@ TEMPLATES = Path(__file__).resolve().parent
 SOURCE = ROOT / "Live_Background_KDE_v0.3.2.zip"
 EXPECTED_SHA256 = "b67ce8339ff079784dfdfdbb3e9565da43999a75334d2d9de1ddd2e107aa150d"
 STAGE = ROOT / "build" / "lively"
-OUTPUT = ROOT / "Live_Background_Lively_v0.3.2.zip"
+OUTPUT = ROOT / "Live_Background_Lively_v0.3.3.zip"
 PREFIX = "Live_Background_KDE/org.steamdeckchecker.livebackground/contents/web/"
 
 def stage():
@@ -32,7 +32,7 @@ def stage():
             target = STAGE / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(archive.read(name))
-    for name in ["lively.js", "LivelyInfo.json", "LivelyInfo.loc.json",
+    for name in ["lively.js", "player.js", "randomizer.js", "LivelyInfo.json", "LivelyInfo.loc.json",
                  "LivelyProperties.json", "LivelyProperties.loc.json",
                  "README_DE.md", "README_EN.md", "CREDITS.md"]:
         shutil.copyfile(TEMPLATES / name, STAGE / name)

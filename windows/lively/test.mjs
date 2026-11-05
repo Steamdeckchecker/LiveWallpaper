@@ -30,10 +30,17 @@ try {
         const cancel = window.clearTimeout.bind(window);
         window.__rotationTimers = new Map();
         let next = -1;
+        const realNow = performance.now.bind(performance);
+        let offset = 0;
+        Object.defineProperty(performance, "now", {value: () => realNow() + offset});
         window.setTimeout = (callback, delay, ...args) => {
             if (delay >= 60000 && delay <= 1800000) {
                 const id = next--;
-                window.__rotationTimers.set(id, {callback: () => callback(...args), delay});
+                const due = performance.now() + delay;
+                window.__rotationTimers.set(id, {callback: () => {
+                    offset += Math.max(0, due - performance.now());
+                    callback(...args);
+                }, delay});
                 return id;
             }
             return schedule(callback, delay, ...args);

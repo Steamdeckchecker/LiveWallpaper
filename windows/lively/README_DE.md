@@ -1,10 +1,10 @@
-# SDC Live Background 0.3.2 für Windows 11 / Lively Wallpaper
+# SDC Live Background 0.3.3 für Windows 11 / Lively Wallpaper
 
 ## Installation
 
 1. Lively Wallpaper über https://www.rocksdanister.com/lively/ installieren.
    Empfohlen ist Lively 2.2 oder neuer mit dem Standard-Webplayer WebView2.
-2. Die Datei **Live_Background_Lively_v0.3.2.zip direkt in das Lively-Fenster
+2. Die Datei **Live_Background_Lively_v0.3.3.zip direkt in das Lively-Fenster
    ziehen**. Diese ZIP muss für den Import nicht entpackt werden.
 3. Das importierte Wallpaper auswählen.
 4. Rechtsklick auf dessen Kachel > **Anpassen / Customise**.
@@ -14,6 +14,23 @@ Als Standard startet **Neon-Emblem-SDC**. Es sind alle neun Motive enthalten:
 Matrix-Regen, Code-Stream, Gewitter, Sternenfeld, Glühwürmchen,
 Neon-Emblem-SDC, Neon-Emblem-Bazzite, Schwebende Blasen SDC und
 Schwebende Blasen Bazzite.
+
+## Korrekturen in 0.3.3
+
+- Im Lively-Betrieb steuern die Lively-Pausenmeldungen den Timer. Eine
+  abweichende Sichtbarkeitsmeldung des eingebetteten Browsers blockiert
+  den Wechsel nicht mehr.
+- Die Animation prüft zusätzlich die nächste Wechselfrist, falls ein
+  langer Browser-Timer verspätet zugestellt wird.
+- Unverändert erneut übergebene Einstellungen starten die Wartezeit nicht
+  neu. Verspätete, bereits abgelöste Timer-Ereignisse werden ignoriert.
+- Der Intervallregler weist ausdrücklich darauf hin, dass bei **Motiv**
+  zuerst **Zufällig (automatischer Wechsel)** gewählt werden muss.
+
+Nach einem Update die neue ZIP als neues Wallpaper importieren und bei
+**Anpassen > Motiv** den Zufallsmodus sowie zunächst **1 Minute** wählen.
+Lively kopiert ZIP-Dateien beim Import; ein bereits importiertes altes
+Wallpaper übernimmt eine neu heruntergeladene ZIP nicht automatisch.
 
 ## Einstellungen
 

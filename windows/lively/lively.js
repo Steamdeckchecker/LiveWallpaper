@@ -1,4 +1,4 @@
-// Lively Wallpaper bridge for SDC Live Background 0.3.2.
+// Lively Wallpaper bridge for SDC Live Background 0.3.3.
 // Documentation: https://github.com/lively-community/lively/wiki/Web-Guide-IV-:-Interaction
 // Pause events: https://github.com/lively-community/lively/wiki/Web-Guide-V-:-System-Data
 "use strict";
@@ -10,6 +10,7 @@
         logo: "", bazziteLogo: "", wallpaper: "", bazziteWallpaper: ""
     };
     let hostPaused = false;
+    let hostConnected = false;
     const number = (value, min, max, fallback) => {
         const parsed = Number(value);
         return Number.isFinite(parsed) ? Math.max(min, Math.min(max, parsed)) : fallback;
@@ -29,7 +30,7 @@
     }
     function apply() {
         if (!window.LiveWallpaper) return;
-        window.LiveWallpaper.configure({...options, paused: options.paused || hostPaused});
+        window.LiveWallpaper.configure({...options, paused: options.paused || hostPaused, hostControlsVisibility: hostConnected});
         const select = document.getElementById("themes");
         if (select) select.value = options.theme;
         const interval = document.getElementById("minutes");
@@ -38,6 +39,7 @@
         if (row) row.hidden = options.theme !== "random";
     }
     window.livelyPropertyListener = (name, value) => {
+        hostConnected = true;
         switch (name) {
             case "theme": {
                 const index = Number(value);
@@ -63,6 +65,7 @@
         try {
             const message = typeof data === "string" ? JSON.parse(data) : data;
             if (message && typeof message.IsPaused === "boolean") {
+                hostConnected = true;
                 hostPaused = message.IsPaused;
                 apply();
             }
@@ -71,8 +74,8 @@
         }
     };
     window.LivelyWallpaperBridge = {
-        version: "0.3.2",
-        state: () => ({...options, hostPaused, effectivePaused: options.paused || hostPaused})
+        version: "0.3.3",
+        state: () => ({...options, hostConnected, hostPaused, effectivePaused: options.paused || hostPaused})
     };
     // Properties can arrive before the web player is ready. Retain them and
     // apply after all scripts have loaded. Lively persists the properties.
